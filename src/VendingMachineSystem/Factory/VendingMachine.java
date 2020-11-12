@@ -1,0 +1,24 @@
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// File: VendingMachine
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//
+// Author: Hedaya
+// Do not use, distribute, or copy without consent of Hedaya
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+package VendingMachineSystem.Factory;
+
+import VendingMachineSystem.model.Bucket;
+import VendingMachineSystem.model.Coin;
+import VendingMachineSystem.model.Item;
+
+import java.util.List;
+
+public interface VendingMachine {
+    public long selectItemAndGetPrice(Item item );
+    public void insertCoin(Coin coin);
+    public List<Coin> refund() ;
+    public Bucket<Item, List<Coin>> collectItemAndChange() ;
+    public void reset() ;
+}
